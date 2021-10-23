@@ -1,0 +1,170 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0 auto;
+    max-width: 1440px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 15px;
+    letter-spacing: 0em;
+    line-height: 1.5em;
+    text-transform: none;
+    color: #363636;
+}
+
+.container {
+    width: 1140px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+.title {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 22px;
+    letter-spacing: .03em;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: #080808;
+}
+
+a {
+    text-decoration: none;
+    color: #85744c;
+}
+
+.header {
+    background-image: url(../images/bradmehldau-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: auto;
+}
+
+.header__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+}
+
+.header__top {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
+    padding: 30px 40px;
+    background: #f5f5f5;
+}
+
+.header__logo {
+    font-weight: 700;
+    font-style: normal;
+    font-size: 24px;
+    letter-spacing: .05em;
+    line-height: .5em;
+    text-transform: uppercase;
+    color: #85744c;
+}
+
+.menu__list {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 12px;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+}
+
+.menu__item:hover {
+    transition: all 1s ease 0s;
+    color: #85744c;
+    cursor: pointer;
+}
+
+.header__arrow {
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.content {
+    padding: 100px 50px;
+}
+
+.content__discription {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.content__batton {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.content__container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 34px;
+}
+
+.content__text {
+    margin: 15px 0;
+}
+
+.content__link {
+    padding-bottom: .05em;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: rgba(121, 105, 67, 0.3);
+}
+
+.content__link:first-child {
+    margin-bottom: 15px;
+}
+
+.content__link:hover {
+    color: rgba(155, 137, 95, 0.3);
+    border-color: rgba(155, 137, 95, 0.3);
+}
+
+.content__link-group {
+    display: inline-flex;
+    flex-direction: column;
+}
+
+.content__link-buy {
+    margin-bottom: 5px;
+    display: inline-block;
+    padding: 10px;
+    text-align: center;
+    font-size: 17px;
+    font-weight: 400;
+    font-style: normal;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    color: #fff;
+    background-color: #978f72;
+}
+
+.content__link-buy:hover {
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+.content__poster {
+    height: 230px;
+}
+
+/* about page */
+
+.about{
+    background-image: url(../images/about/about__header.jpg);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+}
