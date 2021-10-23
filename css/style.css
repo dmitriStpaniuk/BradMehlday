@@ -41,7 +41,7 @@ a {
     background-image: url(../images/bradmehldau-bg.jpg);
     background-repeat: no-repeat;
     background-position: top center;
-    background-size: auto;
+    background-size: cover;
 }
 
 .header__inner {
@@ -103,7 +103,6 @@ a {
 .content__batton {
     display: flex;
     flex-direction: column;
-    
 }
 
 .content__container {
@@ -115,30 +114,43 @@ a {
 .content__text {
     margin: 15px 0;
 }
-
-.content__link {
-    padding-bottom: .05em;
-    border-bottom-width: 1px;
-    border-bottom-style: solid;
-    border-bottom-color: rgba(121, 105, 67, 0.3);
+.content__link{
+    display: inline-block;
+    position: relative;
+}
+.content__link-group{
+    
 }
 
 .content__link:first-child {
     margin-bottom: 15px;
 }
 
-.content__link:hover {
-    color: rgba(155, 137, 95, 0.3);
-    border-color: rgba(155, 137, 95, 0.3);
+.content__link::after {
+    
+    content: '';
+    width: 8px;
+    position: absolute;
+    transition: all 0.5s;
 }
 
-.content__link-group {
-    display: inline-flex;
-    flex-direction: column;
+.content__link::after {
+    left: 0;
+    bottom: -3px;
+    border-bottom: 1px solid #85744c;
+}
+.content__link:hover::after{
+    width: 100%;
+}
+
+
+.content__link:hover {
+    color: rgba(155, 137, 95, 0.3);
 }
 
 .content__link-buy {
-    margin-bottom: 5px;
+    position: relative;
+    margin-bottom: 15px;
     display: inline-block;
     padding: 10px;
     text-align: center;
@@ -156,15 +168,38 @@ a {
     cursor: pointer;
 }
 
-.content__poster {
-    height: 230px;
+.content__link-buy:hover::before {
+    width: 108%;
+    height: 125%;
 }
 
-/* about page */
+.content__link-buy:hover::after {
+    width: 108%;
+    height: 123%;
+}
 
-.about{
-    background-image: url(../images/about/about__header.jpg);
-    background-repeat: no-repeat;
-    background-position: top center;
-    background-size: cover;
+.content__link-buy::before, .content__link-buy::after {
+    content: '';
+    height: 8px;
+    width: 8px;
+    position: absolute;
+    transition: all 0.8s;
+}
+
+.content__link-buy::before {
+    bottom: -5px;
+    right: -5px;
+    border-bottom: 3px solid #85744c;
+    border-right: 3px solid #85744c;
+}
+
+.content__link-buy::after {
+    top: -5px;
+    left: -5px;
+    border-top: 3px solid #85744c;
+    border-left: 3px solid #85744c;
+}
+
+.content__poster {
+    height: 230px;
 }
